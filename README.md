@@ -1,5 +1,5 @@
-# Debugging & Deploying a Dart Web Server
-Debugging and deploying Dart HTTP web server to Elastic Beanstalk.
+# Debugging and Deploying a Flutter Web App To Elastic Beanstalk
+Debugging and deploying a Flutter web app with Dart HTTP web server to Elastic Beanstalk.
 
 [![Build Status](https://www.travis-ci.org/branflake2267/debugging-dart-webserver.svg?branch=master)](https://www.travis-ci.org/branflake2267/debugging-dart-webserver)
 
