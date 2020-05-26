@@ -10,6 +10,7 @@ Debugging and deploying a Flutter web app with Dart HTTP web server to Elastic B
 | Setting | Value |
 | --- | --- |
 | Purpose | Debugging dart web server deployed in a multi-container docker config hosted on Elastic Beanstalk |
+| Client | Flutter app |
 | Server | Dart http web server |
 | Server Language | Dart |
 | Architecture | Dart |
@@ -20,28 +21,37 @@ Debugging and deploying a Flutter web app with Dart HTTP web server to Elastic B
 | Tutorial | [Youtube Tutorial](https://www.youtube.com/watch?v=k_NmD1qmDcA) |
 
 
-
 ## Debugging
 
+### Debugging Client
+
+* Run `cd ./client` to change into the server directory.
 * Run `pub get` to initialize the project.
 
-### Debugging Server with Dart CLI
+
+
+### Debugging Server
+
+* Run `cd ./server` to change into the server directory.
+* Run `pub get` to initialize the project.
+
+#### Debugging Server with Dart CLI
 
 * Run `dart ./server/lib/server.dart`
 
-### Debugging Server with VS Code
+#### Debugging Server with VS Code
 
 * Use the VS Code Launcher `1. Launch Server`
 * http://localhost:8080 - ./ server
 * http://localhost:8080/api - ./api server
 
-### Debugging Docker Container
+#### Debugging Docker Container
 Make sure things work locally in the `eb local run` runner!
 
 * Run `eb local run`
 * Open http://localhost:8080
 
-### Debugging Docker Containers
+#### Debugging Docker Containers
 | cmd | details |
 | --- | --- |
 | docker ps | list the docker containers and [container id]s |
@@ -73,6 +83,11 @@ Add the program launcher, to launch the web server.
 }
 ```
 
+## Generate Flutter Web App
+
+* [Generate a Flutter Web App Instructions](https://flutter.dev/docs/get-started/web)
+* I ran `flutter create client` to create an app named client.
+
 ### Configure AWS & EB CLI
 Configure the AWS CLI and EB CLI utilities.
 
@@ -100,7 +115,7 @@ Set up an Elastic environment for your application.
 
 Run `eb create dartserver-staging-v1` where `dartserver-staging-v1` is the enviornment name you choose. 
 
-### Docker Config
+#### Docker Config
 The `Dockerrun.aws.json` will configure the docker container when deployed. 
 In this configuration I won't show how to build and deploy a Docker image to ECR.
 

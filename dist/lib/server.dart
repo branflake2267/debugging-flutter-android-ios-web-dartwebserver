@@ -1,19 +1,18 @@
 import 'dart:io';
 import 'package:mime_type/mime_type.dart';
 
-var baseExecPath;
+var basePath;
 
 /// Use a VS Code launcher to launch this
 /// OR use dart CLI Run `dart ./lib/server.dart`
 main() async {
   // Note: Must listen on any IP address
   var server = await HttpServer.bind(InternetAddress.anyIPv4, 8080);
-  baseExecPath = Platform.script.path.replaceAll('/lib/server.dart', '');
+  basePath = Platform.script.path.replaceAll('/lib/server.dart', '');
 
   print("Serving at ${server.address}:${server.port}");
-  print("Script execution base path is $baseExecPath");
+  print("Base Directory is $basePath");
 
-  // Listen for requests
   await for (var request in server) {
     handleRequest(request);
   }
@@ -55,22 +54,17 @@ void _handleApiRequest(HttpRequest request) {
 void _handleStaticFilesRequest(HttpRequest request) async {
   final uri = request.uri;
   var path = uri.path;
-
-  // Normalize end
   if (path.endsWith('/')) {
     path = path.substring(0, path.length - 1);
   }
-  // Provide default index.html
   if (!path.contains(".")) {
     path += "/index.html";
   }
-  // Set the absolute file to serve
-  final filePath = '$baseExecPath/html$path';
+  final filePath = '$basePath/html$path';
 
-  //print("path=$path");
+  print("path=$path");
   print('htmlPath=$filePath');
 
-  // Stream file to client
   final File file = await new File(filePath);
   file.exists().then((found) {
     if (found) {

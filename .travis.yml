@@ -4,13 +4,10 @@ dart:
   - stable
 
 install:
-  - cd server
-  - pub get
-  - cd ../
+  - pwd
 
 script:
-  - pwd
-  - ls
+  - sh ./build.sh
 
 # Deploy configuration
 # Note: Be sure region has the bucket and application in that region.
@@ -20,9 +17,9 @@ deploy:
     edge: true
     skip_cleanup: true
     access_key_id:
-      secure: "V50tKh+MotNqyqU2cIbUVDjzlEAAodNvjpgtpjwFoSsTuDkm8UGWwSmh64ooL/XdJ7cwsG+svTGmONdccjxGZz5IlPgoTdh/fG6LKoU2cBDcp9EdXD+trILwOEu2vhV1tHdzS0nE5zhkH+oFg06a0j1ehvDIhOjgzmmnECOvFOGOP1pOdHObROO0Z/3MVse7zjX94UCcfWaTOpGiezujsnagmUPmyo0MBBjfyFMIghh0G5f2vDD/OemnRFBFrpbe34ofveedB4u0sA83Pe0mykYilF9cpHaJ5m9kOTA9KX9NBglfL/OyACTr4e6Fwze4eqDKwkiBpIrrJX0ZZprR3sAB2DIZQ/+jgccFkqr6XdNIwYhWai8aZ0Z9wplA4Qzkf43nMUgemqYoz7RQh0V2oWqpZEN0xT1S5HmwMfUfKLLe9KO+UIh2g6w+XckAW0iXBCdH9/wYhUXKn8XcjFXohXATp5gZYuISgxqqERq2T2jr4kiNaylp+PZ0L88PKCtU0u/IEED3qyBuRYrG7ZP9hbN6yMLMGIjOq+mmU4h4x8cbaHIBBtN3/kv0e9sF/TiRLU7PIPfEZu+fVYMdczrgjbHjLLUL2Y4Zh3NKgCt+iQYifQBIDjOk/3tksXopPIle/HtXszqlS/ZwTiYLLY+mebhtwnuJcg1sivqWM2tKqwI="
+      secure: ""
     secret_access_key:
-      secure: "lSraUAIJUUpgu0/oe3+tX/ognylnJ1B124hfUcGF/ZXznC4LqUidVBFxLAUeMb/ecKGUVYs8yM8hIjyAxh0LxW5r8pzgeHtJmyAeMfmxRpib5KAEi0ebgRlQhH1yb/uZQ83K2hsBqKMDfacPqDDueWUwiX+9eXJTS7qI5Md59ci2lJ/D5BeRwPS27lCFcJDzL/pfbqfA5eJAQwQ9lUll8TGJELN+Q+WHUuWIvZVMKglzp2EncMcRJlOyLMm22ad6Xl0ehhHY3Cnuf3zYSO4S/lw4XXUX686lvqWHN3Ewc1PH3Nv29Nv3rXejOBlv4DBuZa4hRUmGDiIysUo0tkZ0ZExI9cHRawDIFlI7dPiEGaNdiUYtjoIDt4aowAjI77FLLIz0Tbrijw+vjjxpnEqHGIdBGjEOXFKmZ+bfvYDbAjbwYZNrmMYgneq+TkFumBuYMG+voajhWNCEk7czUvGroDevvs7KX794QRv2ox/vAiOEKRmoS5m7XWbBIiKhzz+uDrfFP0iHqlZQO+XiKRN7XVR16n60Qga+IPTuUTQgj8DC83QEPj1QYiSQv48foYKnpEIZqRUIXGfurWn3lagmi+bf9JpOy3dThZFK9R2H1w/xHYK3xbRtqkyV/9pCWyLJnd7RX871YjIHP+EgAhTXr718SrKykEz6iGYL0I/rWUw="
+      secure: ""
     region: "us-west-2"
     app: "debugging-dart-webserver"
     env: "dartserver-staging-v1"
