@@ -19,7 +19,7 @@ echo "Build Client"
 cd ./client
 pwd
 # Used with Travis flutter
-./flutter/bin/flutter build web
+../flutter/bin/flutter build web
 cd ..
 
 
