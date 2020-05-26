@@ -56,7 +56,7 @@ void _handleStaticFilesRequest(HttpRequest request) async {
   final uri = request.uri;
   var path = uri.path;
 
-  // Normalize end
+  // Normalize path ending
   if (path.endsWith('/')) {
     path = path.substring(0, path.length - 1);
   }

@@ -1,49 +1,57 @@
 # Debugging and Deploying a Flutter Web App To Elastic Beanstalk
 Debugging and deploying a Flutter web app with Dart HTTP web server to Elastic Beanstalk.
 
-[![Build Status](https://www.travis-ci.org/branflake2267/debugging-dart-webserver.svg?branch=master)](https://www.travis-ci.org/branflake2267/debugging-dart-webserver)
+[![Build Status](https://www.travis-ci.org/branflake2267/debugging-flutter-android-ios-web-dartwebserver.svg?branch=master)](https://www.travis-ci.org/branflake2267/debugging-flutter-android-ios-web-dartwebserver)
 
-[![Debugging Video Tutorial](https://img.youtube.com/vi/k_NmD1qmDcA/0.jpg)](https://www.youtube.com/watch?v=k_NmD1qmDcA)
+[![Debugging Video Tutorial](https://img.youtube.com/vi/xxx/0.jpg)](https://www.youtube.com/watch?v=xxx)
 
 
 ## Project Configuration 
 | Setting | Value |
 | --- | --- |
-| Purpose | Debugging dart web server deployed in a multi-container docker config hosted on Elastic Beanstalk |
-| Client | Flutter app |
+| Purpose | Debugging futter web app with dart web server hosted on Elastic Beanstalk |
+| Client | Flutter web app |
 | Server | Dart http web server |
+| Client Language | Dart |
 | Server Language | Dart |
-| Architecture | Dart |
+| Architecture | Flutter/Dart |
 | IDE | Visual Studio Code |
 | CI | Travis CI |
 | Hosting | Elastic Beanstalk |
 | License | GPL v3 |
-| Tutorial | [Youtube Tutorial](https://www.youtube.com/watch?v=k_NmD1qmDcA) |
+| Tutorial | [Youtube Tutorial]() |
 
 
 ## Debugging
 
-### Debugging Client
+### Debugging Client CLI
 
 * Run `cd ./client` to change into the server directory.
 * Run `pub get` to initialize the project.
+* Run `flutter run -d chrome`
 
-
-
-### Debugging Server
+### Debugging Server CLI
 
 * Run `cd ./server` to change into the server directory.
 * Run `pub get` to initialize the project.
+* Run `dart ./lib/server/server.dart`
 
-#### Debugging Server with Dart CLI
 
-* Run `dart ./server/lib/server.dart`
-
-#### Debugging Server with VS Code
+### Debugging with VS Code
 
 * Use the VS Code Launcher `1. Launch Server`
-* http://localhost:8080 - ./ server
-* http://localhost:8080/api - ./api server
+* Use the VS Code Launcher `2. Launch Flutter Web App`
+
+#### VS Code Endpoints
+
+* http://localhost:54432/#/ - client 
+* http://localhost:8080 - server
+* http://localhost:8080/api - server
+* http://localhost:8080/api/getMessage - server
+
+
+### Debugging Docker
+Used for debugging deployment config. 
 
 #### Debugging Docker Container
 Make sure things work locally in the `eb local run` runner!
@@ -51,8 +59,7 @@ Make sure things work locally in the `eb local run` runner!
 * Run `eb local run`
 * Open http://localhost:8080
 
-#### Debugging Docker Containers
-| cmd | details |
+| Docker cmd | Details |
 | --- | --- |
 | docker ps | list the docker containers and [container id]s |
 | docker exec -it [container id] bash| /bin/bash into the container. (The container name could be used as well.) |
