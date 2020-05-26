@@ -11,6 +11,8 @@ install:
   - pwd
 
 script:
+  - pwd
+  - ls
   - sh ./build.sh
 
 # Deploy configuration
