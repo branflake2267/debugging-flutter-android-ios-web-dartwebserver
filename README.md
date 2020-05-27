@@ -1,7 +1,7 @@
 # Debugging and Deploying a Flutter Web App To Elastic Beanstalk
 Debugging and deploying a Flutter web app with Dart HTTP web server to Elastic Beanstalk.
 
-[![Build Status](https://www.travis-ci.org/branflake2267/debugging-flutter-android-ios-web-dartwebserver.svg?branch=master)](https://www.travis-ci.org/branflake2267/debugging-flutter-android-ios-web-dartwebserver)
+[![Build Status](https://travis-ci.org/branflake2267/debugging-flutter-android-ios-web-dartwebserver.svg?branch=master)](https://travis-ci.org/branflake2267/debugging-flutter-android-ios-web-dartwebserver)
 
 [![Debugging Video Tutorial](https://img.youtube.com/vi/xxx/0.jpg)](https://www.youtube.com/watch?v=xxx)
 
