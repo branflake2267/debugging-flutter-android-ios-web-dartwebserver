@@ -3,8 +3,8 @@ import 'package:flutter_flavor/flutter_flavor.dart';
 import 'MyApp.dart';
 
 void main() {
-  FlavorConfig(environment: FlavorEnvironment.PROD, variables: {
-    "baseUrl": "http://dartserver-staging-v1.eba-rhptv8q6.us-west-2.elasticbeanstalk.com",
+  FlavorConfig(environment: FlavorEnvironment.DEV, variables: {
+    "baseUrl": "http://localhost:8080",
   });
 
   runApp(MyApp());
