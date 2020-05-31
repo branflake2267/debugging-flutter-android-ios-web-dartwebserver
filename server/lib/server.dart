@@ -10,8 +10,12 @@ main() async {
   var server = await HttpServer.bind(InternetAddress.anyIPv4, 8080);
   baseExecPath = Platform.script.path.replaceAll('/lib/server.dart', '');
 
-  print("Serving at ${server.address}:${server.port}");
-  print("Script execution base path is $baseExecPath");
+  print('Serving at ${server.address}:${server.port}');
+  print('Script execution base path is $baseExecPath');
+
+  print('Try it out: http://localhost:${server.port}/');
+  print('Try it out: http://localhost:${server.port}/api');
+  print('Try it out: http://localhost:${server.port}/api/getMessage');
 
   // Listen for requests
   await for (var request in server) {
@@ -68,7 +72,7 @@ void _handleStaticFilesRequest(HttpRequest request) async {
   final filePath = '$baseExecPath/html$path';
 
   //print("path=$path");
-  print('htmlPath=$filePath');
+  print('Request: static server filePath=$filePath');
 
   // Stream file to client
   final File file = await new File(filePath);
