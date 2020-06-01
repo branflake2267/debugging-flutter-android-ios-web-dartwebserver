@@ -19,6 +19,9 @@ after_script:
   - rm -rf ./client
   - rm -rf ./server
 
+before_deploy:
+  - git add -A
+
 # Deploy configuration
 # Note: Be sure region has the bucket and application in that region.
 # Note: See the readme init instructions on how I created this project.
