@@ -15,12 +15,17 @@ script:
   - sh ./build.sh
 
 after_script:
+  - pwd
+  - ls -la
   # Remove unused directories, the ./dist directory houses it now
   - rm -rf ./client
   - rm -rf ./server
 
 before_deploy:
+  - pwd
+  - ls -la
   - git add -f ./dist
+  - git status
 
 # Deploy configuration
 # Note: Be sure region has the bucket and application in that region.
