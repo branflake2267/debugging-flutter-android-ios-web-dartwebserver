@@ -14,6 +14,11 @@ before_script:
 script:
   - sh ./build.sh
 
+after_script:
+  # Remove unused directories, the ./dist directory houses it now
+  - rm -rf ./client
+  - rm -rf ./server
+
 # Deploy configuration
 # Note: Be sure region has the bucket and application in that region.
 # Note: See the readme init instructions on how I created this project.
