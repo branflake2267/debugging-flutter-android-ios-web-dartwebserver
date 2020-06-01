@@ -2,12 +2,12 @@
 # This will copy the built resources to the build director ./dist. 
 # Run `sh ./build.sh`
 
-# clear the build dir
+# Clean previous build
 echo "Clean ./dist"
 rm -rf ./dist
 mkdir ./dist
 
-# build server
+# Build server
 echo "Build Server"
 cd ./server
 pwd
@@ -15,7 +15,7 @@ pwd
 pub get
 cd ..
 
-# build app
+# Build app
 echo "Build Client"
 cd ./client
 pwd
@@ -34,8 +34,3 @@ ls
 cp -R ./server/* ./dist
 # Copy the client resources (flutter app)
 cp -R ./client/build/web/* ./dist/html
-
-# Fix packages override wiring
-cd ./dist
-flutter pub get
-cd ..
