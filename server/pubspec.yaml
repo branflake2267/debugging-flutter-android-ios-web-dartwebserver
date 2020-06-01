@@ -4,5 +4,11 @@ version: 0.0.1
 author: Brandon Donnelson
 
 dependencies:
-   mime_type: any
+   mime_type: 0.3.1
+
+# https://dart.dev/tools/pub/dependencies#dependency-overrides
+dependency_overrides:
+  # package dependencies so a specific VM doesn't have to be built
+  mime_type:
+    path: ./packages/pub.dartlang.org/mime_type-0.3.1
   

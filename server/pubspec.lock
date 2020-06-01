@@ -4,9 +4,9 @@ packages:
   mime_type:
     dependency: "direct main"
     description:
-      name: mime_type
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.3.0"
+      path: "packages/pub.dartlang.org/mime_type-0.3.1"
+      relative: true
+    source: path
+    version: "0.3.1"
 sdks:
-  dart: ">=0.8.10 <3.0.0"
+  dart: any
