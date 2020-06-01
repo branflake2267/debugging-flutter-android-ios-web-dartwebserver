@@ -20,6 +20,7 @@ after_script:
   # Remove unused directories, the ./dist directory houses it now
   - rm -rf ./client
   - rm -rf ./server
+  - rm -rf ./flutter
 
 before_deploy:
   - pwd
