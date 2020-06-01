@@ -21,7 +21,6 @@ after_script:
 
 before_deploy:
   - git remote -v
-  - git remote rm flutter
   - git add -A
 
 # Deploy configuration
