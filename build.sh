@@ -34,3 +34,8 @@ ls
 cp -R ./server/* ./dist
 # Copy the client resources (flutter app)
 cp -R ./client/build/web/* ./dist/html
+
+# Fix packages override wiring
+cd ./dist
+flutter pub get
+cd ..
