@@ -20,7 +20,7 @@ after_script:
   - rm -rf ./server
 
 before_deploy:
-  - git add ./dist
+  - git add -f ./dist
 
 # Deploy configuration
 # Note: Be sure region has the bucket and application in that region.
