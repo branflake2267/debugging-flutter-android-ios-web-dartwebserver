@@ -11,6 +11,7 @@ mkdir ./dist
 echo "Build Server"
 cd ./server
 pwd
+# Fetch the Dependencies
 pub get
 cd ..
 
@@ -18,8 +19,10 @@ cd ..
 echo "Build Client"
 cd ./client
 pwd
+# Fetch the flutter/dart dependencies
+flutter pub get
 # Used with Travis flutter
-../flutter/bin/flutter build web
+flutter build web
 cd ..
 
 

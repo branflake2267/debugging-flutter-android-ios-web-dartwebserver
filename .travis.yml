@@ -6,16 +6,12 @@ dart:
 before_script:
   # https://flutter.dev/docs/get-started/web
   - git clone https://github.com/flutter/flutter.git -b beta
-  - "./flutter/bin/flutter upgrade"
-  - "./flutter/bin/flutter config --enable-web"
-  - "./flutter/bin/flutter doctor"
-
-install:
-  - pwd
+  - export PATH="$PATH:`pwd`/flutter/bin"
+  - flutter upgrade
+  - flutter config --enable-web
+  - flutter doctor
 
 script:
-  - pwd
-  - ls
   - sh ./build.sh
 
 # Deploy configuration
