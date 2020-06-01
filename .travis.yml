@@ -20,6 +20,8 @@ after_script:
   - rm -rf ./server
 
 before_deploy:
+  - git remote -v
+  - git remote rm flutter
   - git add -A
 
 # Deploy configuration

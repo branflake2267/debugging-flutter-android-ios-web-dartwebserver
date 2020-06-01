@@ -29,6 +29,8 @@ cd ..
 # Build server in the ./dist directory
 # Copy the server resources (dart web server)
 echo "Copy Resources to ./dist"
+pwd
+ls
 cp -R ./server/* ./dist
 # Copy the client resources (flutter app)
 cp -R ./client/build/web/* ./dist/html
