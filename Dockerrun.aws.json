@@ -25,7 +25,7 @@
 
       "command": [
         "dart",
-        "/app/server/lib/server.dart"
+        "/app/dist/lib/server.dart"
       ],
 
       "portMappings": [
