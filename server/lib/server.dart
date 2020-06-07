@@ -38,6 +38,9 @@ void handleRequest(HttpRequest request) {
 
 void _handleApiRequest(HttpRequest request) {
   final uri = request.uri;
+
+  print('Request: Handle api request: uri=${uri.path}');
+
   if (uri.path == '/api') {
     request.response
       ..headers.contentType = ContentType.html
