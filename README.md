@@ -9,7 +9,7 @@ Debugging and deploying a Flutter web app with Dart HTTP web server to Elastic B
 ## Project Configuration 
 | Setting | Value |
 | --- | --- |
-| Purpose | Debugging futter web app with dart web server hosted on Elastic Beanstalk |
+| Purpose | Debugging Flutter web app with dart web server hosted on Elastic Beanstalk |
 | Client | Flutter web app |
 | Server | Dart http web server |
 | Client Language | Dart |
